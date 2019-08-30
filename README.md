@@ -11,4 +11,7 @@ When we started to train the first two models we realised that we needed lot of 
 ![Normal](img_readme/normal.png)
 ![Edited](img_readme/edited.png)
 ## CNN from scratch
+For the model we used 147 images of each label to train and 37 to do the test. We have used keras ans the Sequential model.
+![Edited](img_readme/cnn_model.png)
+We have used four convulotional layers
 ## Transfer Learning using MobileNetV2
