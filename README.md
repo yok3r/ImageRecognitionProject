@@ -11,7 +11,7 @@ Our first impression is that YOLO probably is the one that is going to give us t
 ### Pre-Processing
 For this models we need to do a training with a large set of images but were able to recollect 34 so we should find a way to train more images, the best way to solve this was to do image aumentation, using three types of rotation, applying noise and mirror effect we were able to have 184 images.
 
-![Normal]("img_readme/normal.png")
+![Normal](img_readme/normal.png)
 ![Edited](img_readme/edited.png)
 
 ### Model
