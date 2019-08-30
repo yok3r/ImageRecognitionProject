@@ -22,3 +22,5 @@ We choosed MobileNetV2
 
 #### Conclusions
 Once we did both programs and trained them we got an unexpected result, for us what gived us better accuracy and performance was the cnn from scratch that we were able to achieve an accuracy of 95%. Probably due to the images that we've used for training the model works really well with light but against the light isn't as good as we expected.
+
+What stopped us from following improving the models was that we realised that we couldn't detect two people at the same time, so for being able to do it we used OpenCV model
