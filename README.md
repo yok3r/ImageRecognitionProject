@@ -3,7 +3,7 @@ For this project we have decided to apply the knowledge of the BootCamp course o
 The main point is to find the most effective system to do personalized face recognition. Based on class understanding we have decided to compare four different systems.
   -CNN from scratch
   -Transfer Learning
-  -OpenCV
+  -ORB
   -YOLO
 Our first impression is that YOLO probably is the one that is going to give us the best performance,due to the fact that is being used in many areas, even the fact that it is quite slow in the performance. In second place, or the one that probably also works really well is the Transfer Learning.
 
