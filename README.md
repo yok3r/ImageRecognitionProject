@@ -15,15 +15,23 @@ For this models we need to do a training with a large set of images but were abl
 ![Edited](img_readme/edited.png)
 
 ### Model
-#### The CNN model and layers that we used were:
+#### CNN
+##### Why?
+We wanted to experiment with what we have learned at class and create our model from scratch. We did some research and we realised that the CNN were the best neural networks.
+##### Problems we had
+Once we did the model and trained it, even it was really good we realised that there was a problem; we were not able to detect more than one face at the same time, that was an issue that we needed to solve because for us was a huge drawback.
+##### Conclusion
+Even we did the model form scratch and our first impression was that probably we would not be able to have a good accuracy in the test set we achieve a 95%.
+##### The CNN model and layers that we used were:
 ![Edited](img_readme/cnn_model.png)
 #### The transfer learning:
-We choosed MobileNetV2
+##### Why?
+It is known that creating a CNN model from scratch is not as good as using one that is pre-trained and only needs to add the last layer to adapt it to the requirements of the project that you are developing, so being aware of it we decided to try if that was as good as they presented us, even we had achieved a really good accuracy with the CNN from scratch. The base model that we chosed was MobileNetV2.
+##### Problems we had
+When we started with this model we realised that we were going to have the same problem as before, the restriction of only being able to detect one person at time so we put some different last layers but in any case we achieved a accuracy as good as the case before so we decline to continue
+#### Conclusion 
+The idea of having a pre-trained models with his own filters is really good, but from our point of view it is an option that should be trained if the model that you develop from scratch does not have a good accuracy and you can not find any way to improve it.
 
-#### Conclusions
-Once we did both programs and trained them we got an unexpected result, for us what gived us better accuracy and performance was the cnn from scratch that we were able to achieve an accuracy of 95%. Probably due to the images that we've used for training the model works really well with light but against the light isn't as good as we expected.
-
-What stopped us from following improving the models was that we realised that we couldn't detect two people at the same time, so for being able to do it we used OpenCV model
 
 ## ORB
 
@@ -43,3 +51,11 @@ The key points of ORB are the followings:
   - Can detect rotated and scaled figures.
   
 Why we dindn't choosed ORB:
+
+
+
+### FINAL IDEA: CNN + HardCascade
+Once we tried to develop the four models we realised that non of them was good as we hoped, but thanks to all that we learned we could find a way to mix two of the main ideas that we used in the models and get a good result.
+When we did the OBR we used the HardCascade as a previous step to detect the faces so we used this idea in the CNN model, so instead of detecting a face in a hole image we send the croped faces that the HardCascade had detected before. With this idea we can solve the problem of just one detecting.
+
+While we were using this mixed idea we realised that we needed to train more images. What we tried while we were doing the first training was to have really different images, with different backgrounds, but now that the important thing are the faces because the input of the model is a cropped face we decided to train again the model just with faces. We used the HardCascasde to save the cropped images from a live webcam images and we played with different lights and positions. With that we achieved 560 images. Then we used again the image aumentation and we achieved a dataset of 3160 images for each of us.
