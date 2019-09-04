@@ -32,6 +32,22 @@ When we started with this model we realised that we were going to have the same 
 #### Conclusion 
 The idea of having a pre-trained models with his own filters is really good, but from our point of view it is an option that should be trained if the model that you develop from scratch does not have a good accuracy and you can not find any way to improve it.
 
+#### HaarCascades
+
+One of the most important things in face recognition system is detecting the faces in an image, one of the fastests systems actually is the HaarCascades, this method uses a technique called Histogram of Oriented Gradient (HOG). Basically it trains a cascade function (showed as a boxes of shapes) that learns the general patterns of a face (the attributes), through the change of colors, shapes and shadows. This system have arround 95% accuracy detecting faces. 
+
+HaarCascades don't differenciate between faces but give us the posicion and shape to use later another system to estimate the id of the people.
+
+
+Pros:
+  - Is really fast identifying faces.
+  - Low cpu consumption.
+  - Returns the posicition and dimensions of all the screen faces.
+ 
+
+Conts:
+  - Can't differenciate between people.
+
 
 
 #### ORB
@@ -59,7 +75,7 @@ Why we dindn't choosed ORB:
 
 
 
-### FINAL IDEA: CNN + HardCascade
+### FINAL IDEA: CNN + HaarCascade
 Once we tried to develop the four models we realised that non of them was good as we hoped, but thanks to all that we learned we could find a way to mix two of the main ideas that we used in the models and get a good result.
 When we did the OBR we used the HardCascade as a previous step to detect the faces so we used this idea in the CNN model, so instead of detecting a face in a hole image we send the croped faces that the HardCascade had detected before. With this idea we can solve the problem of just one detecting.
 
