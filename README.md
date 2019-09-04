@@ -33,7 +33,8 @@ When we started with this model we realised that we were going to have the same 
 The idea of having a pre-trained models with his own filters is really good, but from our point of view it is an option that should be trained if the model that you develop from scratch does not have a good accuracy and you can not find any way to improve it.
 
 
-## ORB
+
+#### ORB
 
 Oriented FAST and Rotated BRIEF (ORB) was developed by OpenCV labs mainly as an free alternative of SOFT and SURF after being patented.
 ORB performs better feature detection than SURF, almost two magnitude orders faster.
@@ -51,6 +52,10 @@ The key points of ORB are the followings:
   - Can detect rotated and scaled figures.
   
 Why we dindn't choosed ORB:
+  - Is not the most acured system to detect faces.
+  - This method compares interesting points of two images, if a face changes it can't detect the "evolution".
+  - Sometimes detects parts of hair as a interesting points more than facial caracteristics.
+  
 
 
 
