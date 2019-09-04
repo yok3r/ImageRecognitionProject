@@ -3,7 +3,7 @@ For this project we have decided to apply the knowledge of the BootCamp course o
 The main point is to find the most effective system to do personalized face recognition. Based on class understanding we have decided to compare four different systems.
   -CNN from scratch
   -Transfer Learning
-  -OpenCV
+  -ORB
   -YOLO
 Our first impression is that YOLO probably is the one that is going to give us the best performance,due to the fact that is being used in many areas, even the fact that it is quite slow in the performance. In second place, or the one that probably also works really well is the Transfer Learning.
 
@@ -24,3 +24,22 @@ We choosed MobileNetV2
 Once we did both programs and trained them we got an unexpected result, for us what gived us better accuracy and performance was the cnn from scratch that we were able to achieve an accuracy of 95%. Probably due to the images that we've used for training the model works really well with light but against the light isn't as good as we expected.
 
 What stopped us from following improving the models was that we realised that we couldn't detect two people at the same time, so for being able to do it we used OpenCV model
+
+## ORB
+
+Oriented FAST and Rotated BRIEF (ORB) was developed by OpenCV labs mainly as an free alternative of SOFT and SURF after being patented.
+ORB performs better feature detection than SURF, almost two magnitude orders faster.
+
+Basically starts by finding special regions in a given image called key points, that points are the highly distinctive locations.
+
+We compare the image taked by the webcam with the image gived by us as a reference (my face).
+
+![Normal](img_readme/orbMatches.jpg)
+
+
+The key points of ORB are the followings:
+  - It have a good performance and low cost.
+  - The learning method is based on one gived picture.
+  - Can detect rotated and scaled figures.
+  
+Why we dindn't choosed ORB:
